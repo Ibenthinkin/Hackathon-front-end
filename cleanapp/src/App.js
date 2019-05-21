@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import CardContainer from './CardContainer'
 import UserCard from './UserCard'
 import "./App.css"
-
+const axios = require('axios');
 
 class App extends Component {
 
@@ -21,7 +21,8 @@ class App extends Component {
 
 
     const cardResponse = await fetch('http://localhost:3000/api/v1/cards/')
-    const cardResult = await cardResponse.json()
+    let cardResult = await cardResponse.json()
+    cardResult = cardResult.sort(() => .5 - Math.random()).slice(0,6)
     await this.setState({cards: cardResult})
   }
 
@@ -33,7 +34,6 @@ addTree = (amount) => {
     user: {
         points: newAmount,
         name: userName
-
     }
 }))
     return fetch('http://localhost:3000/api/v1/users/1', {

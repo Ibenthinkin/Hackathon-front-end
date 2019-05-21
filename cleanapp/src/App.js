@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import CardContainer from './CardContainer'
 import UserCard from './UserCard'
 import "./App.css"
-const axios = require('axios');
+
 
 class App extends Component {
 
@@ -27,10 +27,13 @@ class App extends Component {
 
 addTree = (amount) => {
   let newAmount = this.state.user.points
+  let userName = this.state.user.name
   newAmount += amount
   this.setState(prevState => ({
     user: {
-        points: newAmount
+        points: newAmount,
+        name: userName
+
     }
 }))
     return fetch('http://localhost:3000/api/v1/users/1', {

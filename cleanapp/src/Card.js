@@ -15,10 +15,17 @@ class Card extends React.Component {
     // animated infinite bounce
   }
 
+changeComplete = event => {
+  const completedState = event.target.parentElement
+  completedState.classList.add('completed')
+
+}
+
   handleChange = event => {
     const num = parseInt(event.target.parentElement.lastElementChild.innerText)
     this.props.addTree(num)
     this.bounceButton(event)
+    this.changeComplete(event)
   }
 
 

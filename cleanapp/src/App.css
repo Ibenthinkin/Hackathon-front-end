@@ -30,23 +30,34 @@ body{
 .top-tree{
   height: 60px;
   position: absolute;
-  top: 70px;
+  top: 120px;
   right: 200px;
 }
 .top-tree-count{
   position: absolute;
-  top: 70px;
-  right: 175px;
+  top: 120px;
+  right: 155px;
   font-size: 20px;
+  font-family: 'Quicksand', sans-serif;
 }
 .welcome{
   position: absolute;
-  top: 60px;
+  top: 120px;
+  font-family: 'Quicksand', sans-serif;
+
 }
 .title{
   text-align: center;
+  font-family: 'Acme', sans-serif;
+  font-size: 50px;
+  margin-bottom: 50px;
 }
-
+.globe{
+  height: 60px;
+  position: absolute;
+  top: 20px;
+  right: 610px;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

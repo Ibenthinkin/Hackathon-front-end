@@ -36,7 +36,7 @@ addTree = (amount) => {
         name: userName
     }
 }))
-    return fetch('http://localhost:3000/api/v1/users/1', {
+    return fetch('http://localhost:3000/api/v1/users/2', {
       method: 'PATCH',
       headers: {
         "Content-Type": "application/json"
@@ -56,6 +56,7 @@ addTree = (amount) => {
   render() {
     return (<div>
       <h1 className='title'>CleanApp</h1>
+      <img className='globe'src={require(`./images/worldwide.png`)}></img>
       <UserCard user={this.state.user}/>
       <hr/>
       <CardContainer addTree={this.addTree} cards={this.state.cards}/>

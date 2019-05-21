@@ -5,16 +5,23 @@
    font-family: 'Slabo 27px', serif;
    box-shadow: 10px 10px grey !important;
    height: 150px;
+   background-color: #e3c4a8
 
 }
 
+.completed{
+  background-color: #c5fad9
+}
+
 .doneButton {
+  font-family: 'Noto Sans SC', sans-serif;
+  font-size: 13px;
 cursor: pointer;
 color: #fff !important;
 background: green;
 padding: 20px;
 border: none;
-width: 510px;
+width: 528px;
 position: absolute;
 bottom: .1px;
 left: .1px;
@@ -32,9 +39,11 @@ transition: all 0.4s ease 0s;
 }
 
 .card-title{
-width: 200px;
+width: 250px;
 position: absolute;
 top: 10px;
+font-family: 'Quicksand', sans-serif;
+/* font-family: 'Josefin Sans', sans-serif; */
 
 }
 .card-tree{
@@ -49,7 +58,8 @@ top: 10px;
   position: absolute;
   top: 100px;
   left: 60px;
-  font-size: 25px
+  font-size: 25px;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .gif{

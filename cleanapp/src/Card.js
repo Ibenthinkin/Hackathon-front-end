@@ -7,9 +7,18 @@ class Card extends React.Component {
     completed:false,
   }
 
+  bounceButton = event => {
+    let treePic = document.querySelector(".top-tree")
+
+    treePic.classList.add('animated')
+    treePic.classList.add('wobble')
+    // animated infinite bounce
+  }
+
   handleChange = event => {
     const num = parseInt(event.target.parentElement.lastElementChild.innerText)
     this.props.addTree(num)
+    this.bounceButton(event)
   }
 
 

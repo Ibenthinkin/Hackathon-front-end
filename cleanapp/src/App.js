@@ -1,39 +1,32 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import CardContainer from './CardContainer'
-class App extends Component {
 
+class App extends Component {
   constructor() {
     super()
     this.state = {
-      corpses: [],
-      lines: []
+      users: [],
+      cards: []
     }
   }
 
-  async componentDidMount () {
-       const response = await fetch('http://localhost:3000/api/v1/users/')
-       const corpses = await response.json()
-       await this.setState( {corpses: corpses} )
+  async componentDidMount() {
+    const userResponse = await fetch('http://localhost:3000/api/v1/users/')
+    const userResult = await userResponse.json()
+    await this.setState({users: userResult})
 
-       const response2 = await fetch('http://localhost:3000/api/v1/cards/')
-            const lines = await response2.json()
-            await this.setState( {lines: lines} )
-            console.log(lines)
+    const cardResponse = await fetch('http://localhost:3000/api/v1/cards/')
+    const cardResult = await cardResponse.json()
+    await this.setState({cards: cardResult})
   }
 
+  render() {
+    return (<div>
+      <h1>CleanApp</h1>
+      <CardContainer users={this.state.users} cards={this.state.cards}/>
 
-
-
-
-  render(){
-    return (
-      <div><h1>CleanApp</h1>
-        <CardContainer users={this.state.users} cards={this.state.cards}/>
-
-      </div>
-    )
+    </div>)
   }
-
 
 }
 export default App;

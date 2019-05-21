@@ -22,12 +22,14 @@ class Card extends React.Component {
   }
 
 
+
+
   render(){
   return(
     <div className='user-card hvr-grow '>
-      <h3>{this.props.description}</h3>
-      <img className="gif" src='https://media.tenor.com/images/ff4f31cd5064722ed52609069653fe77/tenor.gif' alt=''/>
-      <button onClick={this.handleChange}>Complete!</button>
+      <h3 className='card-title'>{this.props.description}</h3>
+      <img className="gif" src={this.props.keyword} alt=''/>
+      <button className='doneButton'onClick={this.handleChange}>Complete!</button>
       <div className='points-div'>
       <img className='card-tree'src={require(`./images/tree.png`)}></img>
       <p>{this.props.points}</p>

@@ -4,7 +4,7 @@ import './Container.css'
 
 const Container = props => {
 
-  const cards = props.cards.map((card, index) => <Card {...card} key={Date.now() + index} />)
+  const cards = props.cards.map((card, index) => <Card {...card} key={Date.now() + index} addTree={props.addTree} />)
 
   return(
     <div className="card">

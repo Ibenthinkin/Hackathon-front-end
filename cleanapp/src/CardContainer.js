@@ -1,12 +1,13 @@
 import React from 'react'
 import Card from './Card'
+import './Container.css'
 
 const Container = props => {
 
-  const cards = props.cards.map((card, i) => <Card {...card} key={Date.now() + i} />)
+  const cards = props.cards.map((card, index) => <Card {...card} key={Date.now() + index} />)
 
   return(
-    <div className="">
+    <div className="card">
       {cards}
     </div>
   )
